@@ -8,13 +8,13 @@
 
 </head>
 <body>
+<h2>位置情報登録</h2>
 <form action="/list" method="get">
   <input type="text" name="x">
   <input type="text" name="y">
   <input type="submit" value="decide" style="width: 50px;height: 50px;">
 </form>
-
-<table>
+    <table>
   <% @histories.each do |history|  %>
     <tr>
       <td><%= history.x %></td>
