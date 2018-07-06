@@ -10,7 +10,7 @@ require './models'
 get '/' do
   @histories = History.all.limit(10).order("created_at desc")
   @favorites = History.where(favorite1: true)
-  # p @histories
+  p @histories
   erb :form
 end
 
