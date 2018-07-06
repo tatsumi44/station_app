@@ -27,6 +27,11 @@
 <form action="/">
   <input type="submit"value="back">
 </form>
+<% if @id %>
+  <script src="<% @id %>/main.js"></script>
+<% else %>
 <script src="main.js"></script>
+<% end %>
 </body>
+
 </html>
