@@ -19,6 +19,5 @@ $(".st").on('click',function () {
             var next_name = json["next"]
             console.log(next_name)
             $(".next_name").text(next_name)
-
         })
 })

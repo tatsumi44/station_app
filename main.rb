@@ -32,7 +32,6 @@ end
 
 get '/list' do
   uri = URI('http://express.heartrails.com/api/json')
-  History.create!(x: params[:x],y: params[:y])
   uri.query = URI.encode_www_form({
                                       method: "getStations",
                                       x: params[:x],
@@ -41,6 +40,8 @@ get '/list' do
   res = Net::HTTP.get_response(uri)
   json = JSON.parse(res.body)
   @station = json["response"]["station"]
+  p @station[0]["name"]
+  History.create!(x: params[:x],y: params[:y],station_name: @station[0]["name"])
   erb :main
 end
 

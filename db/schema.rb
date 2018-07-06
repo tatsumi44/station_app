@@ -10,14 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_05_212733) do
+ActiveRecord::Schema.define(version: 2018_07_06_070946) do
 
-  create_table "histories", force: :cascade do |t|
-    t.float "x"
-    t.float "y"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean "favorite1", default: false
-  end
+# Could not dump table "histories" because of following StandardError
+#   Unknown type 'String' for column 'station_name'
 
 end
